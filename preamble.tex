@@ -1,0 +1,18 @@
+% Packages orking with XeLatex or LuaTex 
+\usepackage{fontspec,xltxtra}
+\defaultfontfeatures{Ligatures=TeX}
+\usepackage{polyglossia}
+% Titling defaults
+\usepackage{titling}
+% Bibliography
+\usepackage{natbib}
+% Default language 
+\setdefaultlanguage{english}
+\frenchspacing
+
+% Some definitions
+\newcommand{\theinstitution}[1]{My Institution}
+\newcommand{\institution}[1]{\renewcommand{\theinstitution}[1]{#1}}
+
+\newcommand{\thelaboratory}[1]{My laboratory}
+\newcommand{\laboratory}[1]{\renewcommand{\thelaboratory}[1]{#1}}
