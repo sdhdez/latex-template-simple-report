@@ -1,2 +1,2 @@
 # latex-basic-report
-Basic latex template for reports.
+Latex template for simple reports.
