@@ -1,2 +1,7 @@
 # latex-template-simple-report
-Latex template for simple reports.
+
+## Compile
+
+```
+latexmk -xelatex main.tex
+```
