@@ -1,8 +1,12 @@
 \documentclass[a4paper,12pt]{article}
-\include{preamble} % Packages 
-\include{document/default-info} % Title, author, date, etc. 
+\usepackage{preamble} % Packages 
+\import{document/}{default-info} % Title, author, date, etc. 
+\makeindex
 \begin{document}
-\include{document/title-page} % Title page without page number.
-\include{document/abstract} % Abstract
-\include{document/section01/section.tex} % Section
+\import{document/}{title-page} % Title page without page number.
+\import{document/}{abstract} % Abstract
+\import{document/}{contents} % List of contents
+\import{document/chapter-01/}{chapter-01} % Chapter I example 
+\import{document/references/}{references} % References 
+\import{document/appendix/}{appendix} % Appendix 
 \end{document}

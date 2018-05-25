@@ -1,0 +1,65 @@
+\ProvidesPackage{preamble}
+
+% Packages working with XeLatex or LuaTex 
+\usepackage{fontspec,xltxtra}
+\defaultfontfeatures{Ligatures=TeX}
+
+% Document style 
+\usepackage{lscape}
+% \usepackage{pdflscape}
+
+% Language
+\usepackage{polyglossia}
+\setdefaultlanguage{english} % Default language 
+
+% Bibliography
+\usepackage[
+    backend=biber,
+    style=apa,
+    citestyle=authoryear
+]{biblatex}
+\addbibresource{document/mybib.bib} % Set your bib file.
+\DeclareLanguageMapping{english}{english-apa}
+\usepackage{csquotes} % Recommended for biblatex 
+
+% Titling defaults
+\usepackage{titling}
+% Some definitions
+\newcommand{\theinstitution}[1]{My Institution}
+\newcommand{\institution}[1]{\renewcommand{\theinstitution}[1]{#1}}
+\newcommand{\thelaboratory}[1]{My laboratory}
+\newcommand{\laboratory}[1]{\renewcommand{\thelaboratory}[1]{#1}}
+
+% Table of contents
+\usepackage{makeidx}
+% Print index without numbers
+% \let\Contentsline\contentsline 
+% \renewcommand\contentsline[3]{\Contentsline{#1}{#2}{}}
+% Print index without dots
+%\makeatletter
+%\renewcommand{\@dotsep}{10000} % The @ generates an error.
+%\makeatother
+\usepackage[hidelinks]{hyperref}
+% \usepackage[titletoc]{appendix}
+
+% Importing 
+\usepackage{import}
+
+% Paragraph style
+%\frenchspacing
+
+% Position of tables and figures
+\usepackage{float}
+
+% Table style
+% Column specification using >{\cmd} and <{\cmd}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{tabulary}
+
+% Graphics 
+\usepackage{graphicx}
+%\usepackage{svg} % Problems with latexmk
+\usepackage{todonotes}
+\usepackage{subcaption} % To use subfigures nd subtables.
